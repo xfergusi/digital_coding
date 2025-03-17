@@ -6,7 +6,7 @@ class StatsTracker:
     def unique_ip_addresses_input(self, ip_address):
         self.unique_IP_addresses.add(ip_address)
     
-    def unique_IP_addresses_analyse(self):
+    def unique_ip_addresses_analyse(self):
         return len(self.unique_IP_addresses)
 
     most_visited_urls = dict()

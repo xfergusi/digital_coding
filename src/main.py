@@ -30,7 +30,7 @@ def main():
 
     print()
     print("The number of unique IP addresses")
-    print(stats_tracker.unique_IP_addresses_analyse())
+    print(stats_tracker.unique_ip_addresses_analyse())
     print()
     print("The top 3 most visited URLs")
     print(stats_tracker.most_visited_urls_analyse())
