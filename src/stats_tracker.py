@@ -28,15 +28,3 @@ class StatsTracker:
     def most_active_ip_addresses_analyse(self):
         # find the top three values of the and their urls from most_visited_urls
         return most_active_log_analyse_top_three(self.most_active_ip_addresses)
-    
-    # def most_active_log_analyse_top_three(self, storage):
-    #     # Get the top three items sorted by value in descending order
-    #     top_three = sorted(storage.items(), key=lambda item: item[1], reverse=True)[:3]
-    #     return top_three
-
-
-    # def most_active_log_add_input(self, storage, input):
-    #     if storage.get(input):
-    #         storage[input] = storage.get(input) + 1 
-    #     else:
-    #         storage[input] = 1

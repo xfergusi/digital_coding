@@ -18,11 +18,9 @@ def main():
 
     logs_list = get_logs_into_memory(args.log_file)
 
-    # loop through logs and gather stats we care about
     stats_tracker = StatsTracker()
-    # I'm looping through this 
+
     for log in logs_list:
-        print(log)
         ip_address = get_ip_from_log(log)
         stats_tracker.unique_ip_addresses_input(ip_address)
         stats_tracker.most_active_ip_addresses_input(ip_address)
