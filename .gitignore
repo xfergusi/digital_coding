@@ -3,8 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -18,19 +16,6 @@ lib/
 lib64/
 parts/
 sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
 
 # Virtual environments
 venv/
@@ -38,24 +23,14 @@ env/
 .venv/
 .env/
 
-# Pyenv
-.python-version
 
 # VS Code settings
 .vscode/
 
-# PyCharm
-.idea/
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
 # Pytest
 .pytest_cache/
+test_logs/
 
-# Coverage reports
 htmlcov/
 .tox/
 .coverage
@@ -75,36 +50,15 @@ local_settings.py
 db.sqlite3
 media/
 
-# Flask stuff
-instance/
-.webassets-cache
 
-# Scrapy stuff
-.scrapy
 
 # Sphinx documentation
 docs/_build/
 
 # PyBuilder
 target/
-
-# Test and temporary files
-*.tmp
-*.bak
-*.swp
-*.swo
-*.orig
-
 # VS Code settings
 .vscode/
-
-# macOS files
-.DS_Store
-
-# Windows files
-Thumbs.db
-ehthumbs.db
-Desktop.ini
 
 # Log files
 *.log
@@ -112,15 +66,3 @@ Desktop.ini
 # dotenv environment variables
 .env
 .env.*
-
-# Profiles
-*.profile
-
-# Celery
-celerybeat-schedule
-
-# SQL database
-*.sqlite3
-
-# Local development artifacts
-local.env
