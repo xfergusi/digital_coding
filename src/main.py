@@ -1,16 +1,11 @@
 import argparse
 from stats_tracker import StatsTracker
+from log_reader import get_logs_into_memory
 
 def setup():
     parser = argparse.ArgumentParser(description="Input for log analyser")
     parser.add_argument("--log_file", type=str, required=True, help="provide a log file you wish to analyse")
     return parser.parse_args()
-
-def get_logs_into_memory(log_file):
-    # read in the file and bring all the logs into memory
-    with open(log_file, "r") as f:
-        logs = f.readlines()
-    return [log.strip() for log in logs] 
 
 def get_ip_from_log(log):
     return log.split(" ")[0]
