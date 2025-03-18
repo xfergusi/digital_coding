@@ -1,4 +1,3 @@
-import pytest
 from stats_tracker_utils import most_active_log_add_input, most_active_log_analyse_top_three
 
 def test_most_active_log_add_input():

@@ -27,9 +27,9 @@ def test_get_logs_into_memory_with_whitespace():
     logs = get_logs_into_memory(log_file)
     print(logs)
     assert logs == ["log1", "log2", "log3"]
+    # Ensure the test_logs directory exists
+    os.makedirs("src/Tests/test_logs", exist_ok=True)
 
-# @pytest.fixture(scope="function", autouse=True)
-# def cleanup():
-#     os.remove("src/Tests/test_logs/test_whitespace_log_file.txt") 
-#     os.remove("src/Tests/test_logs/test_empty_log_file.txt")
-#     os.remove("src/Tests/test_logs/test_log_file.txt")
+@pytest.fixture(scope="function", autouse=True)
+def cleanup():
+    os.makedirs("src/Tests/test_logs/", exist_ok=True) 

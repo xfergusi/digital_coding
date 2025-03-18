@@ -26,13 +26,7 @@ def print_stats(stats_tracker):
     print(stats_tracker.most_active_ip_addresses_analyse())
     print()
 
-def main():
-    args = setup()
-
-    logs_list = get_logs_into_memory(args.log_file)
-
-    stats_tracker = StatsTracker()
-
+def gather_stats_from_logs(logs_list, stats_tracker):
     for log in logs_list:
         ip_address = get_ip_from_log(log)
         stats_tracker.unique_ip_addresses_input(ip_address)
@@ -41,7 +35,21 @@ def main():
         url = get_url_from_log(log)
         stats_tracker.most_visited_urls_input(url)
 
+def main():
+    # take in command line arguments
+    args = setup()
 
+    # read the logs into memory and store them in a list by line
+    logs_list = get_logs_into_memory(args.log_file)
+
+    # create a new instance of the object that will keep track of statistics
+    stats_tracker = StatsTracker()
+
+    # loop through the logs list and gather statistics
+    gather_stats_from_logs(logs_list, stats_tracker)
+
+    # print the statistics we care about
+    print_stats(stats_tracker)
 
 if __name__ == "__main__":
     main()
