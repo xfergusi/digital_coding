@@ -13,6 +13,19 @@ def get_ip_from_log(log):
 def get_url_from_log(log):
     return log.split(" ")[6]
 
+def print_stats(stats_tracker):
+
+    print()
+    print("The number of unique IP addresses")
+    print(stats_tracker.unique_ip_addresses_analyse())
+    print()
+    print("The top 3 most visited URLs")
+    print(stats_tracker.most_visited_urls_analyse())
+    print()
+    print("The top 3 most active IP addresses")
+    print(stats_tracker.most_active_ip_addresses_analyse())
+    print()
+
 def main():
     args = setup()
 
@@ -28,15 +41,7 @@ def main():
         url = get_url_from_log(log)
         stats_tracker.most_visited_urls_input(url)
 
-    print()
-    print("The number of unique IP addresses")
-    print(stats_tracker.unique_ip_addresses_analyse())
-    print()
-    print("The top 3 most visited URLs")
-    print(stats_tracker.most_visited_urls_analyse())
-    print()
-    print("The top 3 most active IP addresses")
-    print(stats_tracker.most_active_ip_addresses_analyse())
+
 
 if __name__ == "__main__":
     main()
