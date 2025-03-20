@@ -8,26 +8,23 @@ def setup():
     return parser.parse_args()
 
 def get_ip_from_log(log):
-    return log.split(" ")[0]
+    return log.split(" ")[0] # 0th index, but what could it look like in the future, how to manage.IP_INDEX
 
 def get_url_from_log(log):
     return log.split(" ")[6]
 
 def print_stats(stats_tracker):
 
-    print()
-    print("The number of unique IP addresses")
+    print("The number of unique IP addresses\n")
     print(stats_tracker.unique_ip_addresses_analyse())
-    print()
-    print("The top 3 most visited URLs")
+    print("The top 3 most visited URLs\n")
     print(stats_tracker.most_visited_urls_analyse())
-    print()
-    print("The top 3 most active IP addresses")
+    print("The top 3 most active IP addresses\n")
     print(stats_tracker.most_active_ip_addresses_analyse())
-    print()
 
-def gather_stats_from_logs(logs_list, stats_tracker):
+def gather_stats_from_logs(logs_list, stats_tracker): #be able to pass in any number of funcs to call
     for log in logs_list:
+
         ip_address = get_ip_from_log(log)
         stats_tracker.unique_ip_addresses_input(ip_address)
         stats_tracker.most_active_ip_addresses_input(ip_address)
