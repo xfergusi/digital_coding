@@ -1,3 +1,10 @@
+"""
+Extracts the URL from a log entry.
+
+Further improvements:
+- Add parameter validation
+- Add variability in the log format
+"""
 def get_ip_from_log(log):
     return log.split(" ")[0]
 

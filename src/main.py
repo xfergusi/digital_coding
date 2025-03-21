@@ -15,6 +15,13 @@ def setup():
     return parser.parse_args()
 
 
+"""
+Prints statistical analysis of logs using the provided stats_tracker.
+
+Futher improvements:
+- Add more statistical analysis
+- Add parameters to only print certain statistics
+"""
 def print_stats(stats_tracker):
     print(
         f"The number of unique IP addresses:\n"
@@ -30,6 +37,12 @@ def print_stats(stats_tracker):
     )
 
 
+"""
+Processes a list of log entries to gather statistics on IP addresses and URLs.
+
+Further improvements:
+- Add parameters to only perform analysis on certain statistics
+"""
 def gather_stats_from_logs(logs_list, stats_tracker):
     for log in logs_list:
         ip_address = get_ip_from_log(log)

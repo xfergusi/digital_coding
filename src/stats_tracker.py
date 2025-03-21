@@ -1,6 +1,15 @@
 from stats_tracker_utils import most_active_log_add_input, most_active_log_analyse_top_three
 
+"""
+Module: stats_tracker
 
+This module provides the `StatsTracker` class, which is used to track and analyze 
+various statistics related to IP addresses and URLs. It supports tracking unique 
+IP addresses, the most visited URLs, and the most active IP addresses.
+
+Further improvements:
+- Add currently we have no way of assessing "ties" in the top three most visited URLs or most active IP addresses.
+"""
 class StatsTracker:
     unique_ip_addresses = set()
 
