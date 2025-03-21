@@ -4,8 +4,11 @@ Thank you for taking the time to review my coding challenge submission. I apprec
 
 ## Assumptions
 - Python 3.8 or higher is installed.
-- All necessary dependencies are installed (see `requirements.txt`).
 - The log file format is consistent and correctly formatted.
+
+## Design approach
+
+
 
 ## Improvements
 - Optimize file reading to handle large files efficiently.
@@ -23,11 +26,21 @@ Thank you for taking the time to review my coding challenge submission. I apprec
     ```sh
     pip install -r requirements.txt
     ```
-3. Run the main script:
+
+#### Your Environment is now set up, I would reccomend running the end to end test to showcase a working project.
+
+- Run the end to end test
+    ```sh
+    chmod 755 end_to_end_test/E2E_test.sh
+    end_to_end_test/E2E_test.sh
+    ```
+
+- Run the main script (manually):
     ```sh
     python src/main.py --log_file logs/small.log
     ```
-4. Run the tests:
+- Run the unit tests:
     ```sh
     pytest src/Tests
     ```
+

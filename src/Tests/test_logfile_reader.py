@@ -1,7 +1,7 @@
 import pytest
 import os
 
-from log_reader import get_logs_into_memory
+from src.logfile_reader import get_logs_into_memory
 
 def test_get_logs_into_memory():
     log_file = "src/Tests/test_logs/test_log_file.txt"
