@@ -3,26 +3,42 @@ from stats_tracker import StatsTracker
 from logfile_reader import get_logs_into_memory
 from log_parser import get_ip_from_log, get_url_from_log
 
+
 def setup():
     parser = argparse.ArgumentParser(description="Input for log analyser")
-    parser.add_argument("--log_file", type=str, required=True, help="provide a log file you wish to analyse")
+    parser.add_argument(
+        "--log_file",
+        type=str,
+        required=True,
+        help="provide a log file you wish to analyse"
+    )
     return parser.parse_args()
 
+
 def print_stats(stats_tracker):
+    print(
+        f"The number of unique IP addresses:\n"
+        f"{stats_tracker.unique_ip_addresses_analyse()}"
+    )
+    print(
+        f"The top 3 most visited URLs\n"
+        f"{stats_tracker.most_visited_urls_analyse()}"
+    )
+    print(
+        f"The top 3 most active IP addresses\n"
+        f"{stats_tracker.most_active_ip_addresses_analyse()}"
+    )
 
-    print(f"The number of unique IP addresses:\n{stats_tracker.unique_ip_addresses_analyse()}")
-    print(f"The top 3 most visited URLs\n{stats_tracker.most_visited_urls_analyse()}")
-    print(f"The top 3 most active IP addresses\n{stats_tracker.most_active_ip_addresses_analyse()}")
 
-def gather_stats_from_logs(logs_list, stats_tracker): #be able to pass in any number of funcs to call
+def gather_stats_from_logs(logs_list, stats_tracker):
     for log in logs_list:
-
         ip_address = get_ip_from_log(log)
         stats_tracker.unique_ip_addresses_input(ip_address)
         stats_tracker.most_active_ip_addresses_input(ip_address)
 
         url = get_url_from_log(log)
         stats_tracker.most_visited_urls_input(url)
+
 
 def main():
     # take in command line arguments
@@ -39,6 +55,7 @@ def main():
 
     # print the statistics we care about
     print_stats(stats_tracker)
+
 
 if __name__ == "__main__":
     main()
