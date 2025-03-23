@@ -9,6 +9,7 @@ Start at `src/main.py` and start at the `main()` function. I added a few comment
 ## Assumptions
 - Python 3.8 or higher is installed.
 - The log file format is consistent and correctly formatted.
+- In the event there are ties in the "Top 3", we only show 3 stats, some may be trucated. 
 
 ## Improvements
 - Optimize file reading to handle large files efficiently.
