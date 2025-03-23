@@ -2,13 +2,13 @@
 
 Thank you for taking the time to review my coding challenge submission. I appreciate your feedback and look forward to any suggestions you may have for improving my code. Please find the instructions and details about the project below.
 
+## Simplest Way to Review the Code
+
+Start at `src/main.py` and start at the `main()` function. I added a few comments, for readability, in the main fuction to give an idea of how my program was designed. 
+
 ## Assumptions
 - Python 3.8 or higher is installed.
 - The log file format is consistent and correctly formatted.
-
-## Design approach
-
-
 
 ## Improvements
 - Optimize file reading to handle large files efficiently.

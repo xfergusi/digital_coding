@@ -58,6 +58,7 @@ def main():
     args = setup()
 
     # read the logs into memory and store them in a list by line
+    # [line1, line2, line3, ...]
     logs_list = get_logs_into_memory(args.log_file)
 
     # create a new instance of the object that will keep track of statistics
