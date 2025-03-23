@@ -21,6 +21,7 @@ Prints statistical analysis of logs using the provided stats_tracker.
 Futher improvements:
 - Add more statistical analysis
 - Add parameters to only print certain statistics
+- Make it prettier when printed. Right now I'm just printing the raw data.
 """
 def print_stats(stats_tracker):
     print(
@@ -28,11 +29,11 @@ def print_stats(stats_tracker):
         f"{stats_tracker.unique_ip_addresses_analyse()}"
     )
     print(
-        f"The top 3 most visited URLs\n"
+        f"The top 3 most visited URLs:\n"
         f"{stats_tracker.most_visited_urls_analyse()}"
     )
     print(
-        f"The top 3 most active IP addresses\n"
+        f"The top 3 most active IP addresses:\n"
         f"{stats_tracker.most_active_ip_addresses_analyse()}"
     )
 
