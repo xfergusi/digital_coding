@@ -35,6 +35,7 @@ def test_get_logs_into_memory_with_whitespace():
     logs = get_logs_into_memory(log_file)
     assert logs == ["log1", "log2", "log3"]
 
+
 def test_get_logs_into_memory():
     log_file = "src/Tests/test_logs/test_log_file.txt"
     with open(log_file, "w") as f:

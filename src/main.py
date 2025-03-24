@@ -4,6 +4,7 @@ from logfile_reader import get_logs_into_memory
 from log_parser import get_ip_from_log, get_url_from_log
 import traceback
 
+
 def setup():
     parser = argparse.ArgumentParser(description="Input for log analyser")
     parser.add_argument(
@@ -54,12 +55,12 @@ def gather_stats_from_logs(logs_list: list, stats_tracker: StatsTracker):
 
             url = get_url_from_log(log)
             stats_tracker.most_visited_urls_input(url)
-            exit()
     except Exception as e:
         print(f"Error gathering stats from logs, specific details below:")
         print(e)
         traceback.print_exc()
         exit(1)
+
 
 def main():
     # take in command line arguments

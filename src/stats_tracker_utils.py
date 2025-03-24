@@ -1,7 +1,6 @@
 """
 This module provides utility functions for tracking and analyzing the frequency of inputs in a storage dictionary.
 """
-
 def most_active_log_add_input(storage: dict, input: str):
     if storage.get(input):
         storage[input] = storage.get(input) + 1
