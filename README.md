@@ -10,12 +10,14 @@ Start at `src/main.py` and start at the `main()` function. I added a few comment
 - Python 3.8 or higher is installed.
 - The log file format is consistent and correctly formatted.
 - In the event there are ties in the "Top 3", we only show 3 stats, some may be trucated. 
+- I only ran this on my macbook, the commands below should work on mac, but has not been tested on Windows or Linux.
 
 ## Improvements
 - Optimize file reading to handle large files efficiently.
 - Refactor the code to improve the performance of extracting the top three entries from the hashmap.
 - Add error handling and logging for better debugging and maintenance.
 - Write additional unit tests to cover edge cases and improve code coverage.
+- Set up instruction to venv
 
 ## How to Run
 1. Clone the repository:
